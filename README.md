@@ -19,25 +19,31 @@ The scraped data will be saved to an Excel file named "products.xlsx" in the cur
 
 The ScrapMetro project is built using Python 3 and Selenium. The script uses a pre-configured Chrome browser profile to handle cookie management, and regular expressions to extract the promotional price from the product page.
 
-### Dependencies
+## Dependencies
 
-The following Python packages are required to run the ScrapMetro script:
+To run the project, you'll need to have Python 3 installed on your system. You can download Python 3 from the [official website](https://www.python.org/downloads/).
+
+You'll also need to install the following Python packages:
 
 - selenium
 - openpyxl
+- python-dotenv
 
 To install these packages, you can use pip:
 
 pip install -r requirements
 
-### Running the Script
+## Running the Script
 
 To run the ScrapMetro script, follow these steps:
 
 1. Clone this repository to your local machine.
 2. Install the required dependencies (see above).
-3. Open a terminal window and navigate to the project directory.
-4. Run the script with the product URL as a command line argument (see above).
+3. (optional) Create a `.env` file and set your METRO credentials in it using the following format:
+   METRO_USERNAME=<your_username>
+   METRO_PASSWORD=<your_password>
+4. Open a terminal window and navigate to the project directory.
+5. Run the script with the product URL as a command line argument (see above).
 
 ## Challenges
 
@@ -57,6 +63,6 @@ To handle this, the project uses regular expressions to match the promotional pr
 
 The ScrapMetro project demonstrates how to use Selenium and Python to scrape data from a website. By using a Chrome browser profile and regular expressions, the project is able to handle cookie management and multiple types of promotions. With some additional improvements, the project could be extended to handle scraping multiple products and additional types of promotions.
 
-### Author
+## Author
 
-Ce repository a été créé par Romain Dufourt.
+This repository was created by Romain Dufourt.
