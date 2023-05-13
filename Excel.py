@@ -1,9 +1,8 @@
 import openpyxl
 import os
-from MetroPromo import FILE_PATH
 
 def save_to_excel(title, price):
-    file = FILE_PATH
+    file = "metro_excel.xlsx"
     
     if (os.path.isfile(file)):
         wb_append = openpyxl.load_workbook(file)

@@ -7,8 +7,6 @@ import sys
 from Metro import metro
 import signal
 
-FILE_PATH = "metro_excel.xlsx"
-
 def signal_handler(sig, frame):
     print("\nYou pressed Ctrl+C, Ctrl+Z or Ctrl+D. Exiting gracefully.")
     sys.exit(0)
@@ -16,11 +14,11 @@ def signal_handler(sig, frame):
 signal.signal(signal.SIGINT, signal_handler)
 
 def main():
-    # driver = setup("https://shop.metro.fr/") // using cookies
+    # driver = setup("https://shop.metro.fr/") # using cookies
     service = Service(ChromeDriverManager().install())
     chrome_options = Options()
     chrome_options.add_argument("--start-maximized")
-    chrome_options.add_argument(f"--user-data-dir=/home/romain/.config/google-chrome/Default1")
+    chrome_options.add_argument(f"--user-data-dir=/home/romain/.config/google-chrome/Default1") # using chrome profile
     driver = webdriver.Chrome(service=service, options=chrome_options)
     try: 
         print(sys.argv[1])
